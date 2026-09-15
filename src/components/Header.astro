@@ -13,11 +13,46 @@ import HeaderLink from './HeaderLink.astro';
 			<HeaderLink href="/about">About</HeaderLink>
 			<HeaderLink href="/#contact">Contact</HeaderLink>
 		</div>
+		<button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+			<span class="theme-toggle-icon" aria-hidden="true">
+				<span class="theme-icon-sun">☀</span>
+				<span class="theme-icon-moon">☾</span>
+			</span>
+		</button>
 	</nav>
 </header>
 
+<script>
+	const toggle = document.querySelector<HTMLButtonElement>('.theme-toggle');
+	const root = document.documentElement;
+	const preferenceKey = 'theme-preference';
+
+	const getTheme = () => {
+		const savedTheme = localStorage.getItem(preferenceKey);
+		if (savedTheme === 'light' || savedTheme === 'dark') return savedTheme;
+		return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+	};
+
+	const updateToggle = (theme: string) => {
+		const isDark = theme === 'dark';
+		root.dataset.theme = theme;
+		toggle?.setAttribute('data-theme', theme);
+		toggle?.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+		toggle?.setAttribute('aria-pressed', String(isDark));
+	};
+
+	updateToggle(getTheme());
+
+	toggle?.addEventListener('click', () => {
+		const nextTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+		localStorage.setItem(preferenceKey, nextTheme);
+		updateToggle(nextTheme);
+	});
+</script>
+
 <style>
 	header {
+		position: relative;
 		margin: 0;
 		padding: 0 max(1rem, calc((100vw - var(--content-width)) / 2));
 		background: var(--paper);
@@ -62,10 +97,60 @@ import HeaderLink from './HeaderLink.astro';
 	.internal-links a:hover,
 	.internal-links a.active {
 		color: var(--accent-dark);
+		underline: 2px solid var(--accent);
 	}
 
 	.internal-links a.active {
 		border-bottom: 2px solid var(--accent);
+	}
+
+	.theme-toggle {
+		display: grid;
+		flex: 0 0 auto;
+		place-items: center;
+		width: 2.35rem;
+		height: 2.35rem;
+		padding: 0;
+		border: 1px solid var(--line);
+		border-radius: 999px;
+		background: var(--surface);
+		color: var(--accent-dark);
+		cursor: pointer;
+		transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+	}
+
+	.theme-toggle:hover,
+	.theme-toggle:focus-visible {
+		border-color: var(--accent);
+		background: var(--accent);
+		color: var(--paper);
+	}
+
+	.theme-toggle:focus-visible {
+		outline: 2px solid var(--accent);
+		outline-offset: 3px;
+	}
+
+	.theme-toggle-icon {
+		display: block;
+		font-size: 1.15rem;
+		line-height: 1;
+	}
+
+	.theme-icon-sun {
+		display: none;
+	}
+
+	.theme-icon-moon {
+		display: inline;
+	}
+
+	.theme-toggle[data-theme='dark'] .theme-icon-sun {
+		display: inline;
+	}
+
+	.theme-toggle[data-theme='dark'] .theme-icon-moon {
+		display: none;
 	}
 
 	@media (max-width: 620px) {
@@ -79,6 +164,12 @@ import HeaderLink from './HeaderLink.astro';
 		.internal-links {
 			width: 100%;
 			justify-content: flex-start;
+		}
+
+		.theme-toggle {
+			position: absolute;
+			top: 1rem;
+			right: 1rem;
 		}
 	}
 </style>

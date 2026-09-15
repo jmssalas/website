@@ -12,12 +12,8 @@
     --line: #d8d5cc;
     --muted: #5b6162;
 
-    --font-body:
-        -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial,
-        sans-serif;
-    --font-display:
-        -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial,
-        sans-serif;
+    --font-body: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-display: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
 
     --space-1: 0.5rem;
     --space-2: 0.75rem;
@@ -30,6 +26,21 @@
     --space-9: 10rem;
 
     --content-width: 76rem;
+    color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+    --accent: #6fa59d;
+    --accent-dark: #8bbab3;
+    --black: 235, 237, 236;
+    --gray: 161, 168, 166;
+    --gray-light: 58, 64, 63;
+    --gray-dark: 213, 217, 215;
+    --paper: #181b1a;
+    --surface: #202524;
+    --line: #343b39;
+    --muted: #a1a8a6;
+    color-scheme: dark;
 }
 
 /* Base */
@@ -592,7 +603,7 @@ hr {
 /* Dark mode */
 
 @media (prefers-color-scheme: dark) {
-    :root {
+    :root:not([data-theme]) {
         --accent: #6fa59d;
         --accent-dark: #8bbab3;
 
