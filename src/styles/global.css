@@ -59,7 +59,7 @@ body {
     background: var(--paper);
     color: rgb(var(--gray-dark));
     font-family: var(--font-body);
-    font-size: 17px;
+    font-size: 20px;
     line-height: 1.65;
     overflow-wrap: break-word;
     text-align: left;
@@ -135,7 +135,6 @@ h5 {
 p {
     margin: 0 0 var(--space-4);
     color: rgb(var(--gray-dark));
-    font-size: clamp(1rem, 1.35vw, 1.2rem);
     line-height: 1.65;
 }
 
@@ -180,7 +179,6 @@ a:hover {
 }
 
 .hero-description {
-    font-size: clamp(1.15rem, 2vw, 1.4rem);
     line-height: 1.5;
 }
 
