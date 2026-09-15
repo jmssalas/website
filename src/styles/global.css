@@ -81,7 +81,7 @@ main {
 /* Sections */
 
 main > section {
-    padding: var(--space-9) 0;
+    padding: var(--space-7) 0;
     border-top: 1px solid var(--line);
 }
 
