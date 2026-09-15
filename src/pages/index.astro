@@ -12,38 +12,106 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 	</head>
 	<body>
 		<Header />
+
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<section class="hero">
+				<p class="eyebrow">Software Engineer &amp; Architect</p>
+
+				<h1>I TURN COMPLEXITY INTO STRUCTURE.</h1>
+
+				<p class="hero-description">
+					I help engineering teams make sense of complex systems, make better technical
+					decisions, and build reliable software.
+				</p>
+
+				<a href="#work">See how I work ↓</a>
+			</section>
+
+			<section class="problem">
+				<h2>Complexity is rarely the problem.</h2>
+				<p>Unstructured complexity is.</p>
+			</section>
+
+			<section class="services">
+				<h2>How I can help</h2>
+
+				<div class="service-grid">
+					<div class="service-card">
+					<h3>Architecture &amp; System Design</h3>
+					<p>
+						Turning ambiguous requirements and constraints into systems that are
+						understandable, evolvable and reliable.
+					</p>
+					</div>
+
+					<div class="service-card">
+					<h3>Systems Diagnosis</h3>
+					<p>
+						Understanding difficult existing systems, finding the real constraints,
+						and turning technical uncertainty into clear decisions.
+					</p>
+					</div>
+
+					<div class="service-card">
+					<h3>Engineering Rescue</h3>
+					<p>
+						Helping teams move forward when a system has become difficult to maintain,
+						scale, debug or evolve.
+					</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="process">
+				<h2>How I work</h2>
+
+				<div class="process-flow">
+					<p class="process-step">Ambiguity → Understanding → Structure → Decisions → Engineering → Reliable System</p>
+				</div>
+			</section>
+
+			<section class="selected-work" id="work">
+				<h2>Selected work</h2>
+
+				<div class="project-grid">
+					<article class="project-card">
+					<h3>AKVAKT</h3>
+					<p>Designing a platform from zero.</p>
+					</article>
+
+					<article class="project-card">
+					<h3>CIXOR</h3>
+					<p>Making a difficult system incremental.</p>
+					</article>
+				</div>
+			</section>
+
+			<section class="notebook">
+				<h2>Engineering Notebook</h2>
+				<p>I write about the engineering decisions behind real systems.</p>
+				<a href="/notebook">Explore the Engineering Notebook →</a>
+			</section>
+
+			<section class="about">
+				<h2>About</h2>
+				<p>
+					I'm José, a software engineer and architect with around eight years of
+					experience building and evolving complex systems.
+				</p>
+				<a href="/about">More about me →</a>
+			</section>
+
+			<section class="contact" id="contact">
+				<h2>Have a difficult technical problem?</h2>
+				<p>
+					If you're dealing with a system that's hard to understand, a new platform
+					that needs architectural direction, or an engineering problem that needs
+					someone to take ownership — let's talk.
+				</p>
+				<a href="mailto:TODO">Get in touch →</a>
+			</section>
 		</main>
+
 		<Footer />
 	</body>
 </html>
