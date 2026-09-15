@@ -2,18 +2,22 @@
     --accent: #39736c;
     --accent-dark: #285b55;
 
-    --black: 25, 27, 29;
-    --gray: 91, 96, 99;
-    --gray-light: 224, 222, 216;
-    --gray-dark: 47, 51, 53;
+    --black: 27, 29, 30;
+    --gray: 91, 97, 98;
+    --gray-light: 222, 219, 211;
+    --gray-dark: 49, 53, 54;
 
-    --paper: #f6f5f1;
-    --surface: #ffffff;
-    --line: #d9d7d1;
-    --muted: #5b6063;
+    --paper: #f4f2ec;
+    --surface: #fbfaf7;
+    --line: #d8d5cc;
+    --muted: #5b6162;
 
-    --font-body: var(--font-atkinson), sans-serif;
-    --font-display: var(--font-atkinson), sans-serif;
+    --font-body:
+        -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+    --font-display:
+        -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
 
     --space-1: 0.5rem;
     --space-2: 0.75rem;
@@ -44,11 +48,12 @@ body {
     background: var(--paper);
     color: rgb(var(--gray-dark));
     font-family: var(--font-body);
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.65;
     overflow-wrap: break-word;
     text-align: left;
     word-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
@@ -89,7 +94,7 @@ h6 {
     color: rgb(var(--black));
     font-family: var(--font-display);
     font-weight: 700;
-    letter-spacing: 0;
+    letter-spacing: -0.025em;
     line-height: 1.08;
 }
 
@@ -119,7 +124,7 @@ h5 {
 p {
     margin: 0 0 var(--space-4);
     color: rgb(var(--gray-dark));
-    font-size: clamp(1.15rem, 2vw, 1.4rem);
+    font-size: clamp(1rem, 1.35vw, 1.2rem);
     line-height: 1.65;
 }
 
@@ -237,7 +242,7 @@ a:hover {
 
 .service-card p {
     margin-bottom: 0;
-    font-size: 1.15rem;
+    font-size: 1.05rem;
 }
 
 /* Process */
@@ -308,7 +313,7 @@ a:hover {
 
 .project-card p {
     margin-bottom: var(--space-4);
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--muted);
 }
 
@@ -588,15 +593,15 @@ hr {
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --accent: #5c9c94;
-        --accent-dark: #72aea7;
+        --accent: #6fa59d;
+        --accent-dark: #8bbab3;
 
         --black: 235, 237, 236;
         --gray: 161, 168, 166;
         --gray-light: 58, 64, 63;
         --gray-dark: 213, 217, 215;
 
-        --paper: #171a19;
+        --paper: #181b1a;
         --surface: #202524;
         --line: #343b39;
         --muted: #a1a8a6;
