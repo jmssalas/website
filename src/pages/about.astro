@@ -1,63 +1,210 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import { SITE_TITLE } from "../consts";
+
+const description =
+    "About José María Sánchez Salas — Software Engineer & Architect building and evolving complex software systems.";
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage={AboutHeroImage}
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<!doctype html>
+<html lang="en">
+    <head>
+        <BaseHead title={`About — ${SITE_TITLE}`} description={description} />
+    </head>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+    <body>
+        <Header />
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+        <main>
+            <section class="page-intro">
+                <h1>I TEND TO END UP WHERE THINGS GET COMPLICATED.</h1>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+                <p class="lead">
+                    I'm José María Sánchez Salas, a Software Engineer and
+                    Architect with around eight years of experience building and
+                    evolving software systems.
+                </p>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+                <p>
+                    I started as a backend developer. Over time, the interesting
+                    problems moved further away from individual services and
+                    closer to the system itself: architecture, data flows,
+                    performance, infrastructure, constraints and the decisions
+                    that determine whether a system can keep evolving.
+                </p>
+            </section>
+
+            <section class="page-section">
+                <h2>THE ENVIRONMENTS CHANGED. THE PROBLEM DIDN'T.</h2>
+
+                <p>
+                    I've worked on backend platforms, APIs, distributed
+                    processing systems and real-time data pipelines.
+                </p>
+
+                <p>
+                    I've also worked much closer to the physical world:
+                    industrial edge systems running on constrained hardware,
+                    communicating through protocols like MQTT, Modbus, TCP, UDP
+                    and ADS, deployed at customer sites where connectivity,
+                    resources and failure modes were very different from a
+                    typical cloud environment.
+                </p>
+
+                <p>Those systems look very different on paper.</p>
+
+                <p>But they tend to create the same underlying problem:</p>
+
+                <p class="statement">
+                    <strong>
+                        There is more complexity than can be understood by
+                        looking at one piece of the system at a time.
+                    </strong>
+                </p>
+            </section>
+
+            <section class="page-section">
+                <h2>THAT'S WHAT I LIKE WORKING ON.</h2>
+
+                <p>
+                    I enjoy figuring out how the pieces actually fit together.
+                </p>
+
+                <p>
+                    Where the boundaries should be. Which constraints are real.
+                    What needs to happen in real time. What happens when
+                    something fails. Which abstractions are useful and which
+                    ones are just adding another layer of complexity.
+                </p>
+
+                <p>
+                    That usually means going deeper than the initial problem
+                    suggests.
+                </p>
+
+                <p>
+                    A performance problem might actually be a data-model
+                    problem. A scaling problem might actually be a
+                    workload-management problem. A messy codebase might actually
+                    be suffering from unclear boundaries.
+                </p>
+
+                <p class="statement">
+                    <strong>
+                        I like finding the problem underneath the problem.
+                    </strong>
+                </p>
+            </section>
+
+            <section class="page-section">
+                <h2>ARCHITECTURE WITHOUT LEAVING ENGINEERING BEHIND.</h2>
+
+                <p>
+                    Over the years, my role moved from implementing individual
+                    services to taking responsibility for how larger systems fit
+                    together.
+                </p>
+
+                <p>
+                    I've designed systems from scratch, evolved existing
+                    architectures, investigated difficult performance problems,
+                    changed database models, worked with constrained hardware
+                    and integrated systems that don't behave like ordinary
+                    software.
+                </p>
+
+                <p>
+                    I've also led small engineering teams and worked closely
+                    with other engineers to turn ambiguous problems into
+                    something concrete enough to build.
+                </p>
+
+                <p>I still write code.</p>
+
+                <p>
+                    For me, architecture isn't about moving away from
+                    engineering.
+                </p>
+
+                <p class="statement">
+                    <strong>
+                        It's about making better engineering decisions before —
+                        and while — the code is being written.
+                    </strong>
+                </p>
+            </section>
+
+            <section class="page-section">
+                <h2>
+                    A COUPLE OF SYSTEMS THAT REPRESENT THE KIND OF WORK I ENJOY.
+                </h2>
+
+                <div class="work-list">
+                    <article>
+                        <h3>AKVAKT Industrial Edge Platform</h3>
+
+                        <p>
+                            A reusable industrial platform built from
+                            customer-specific prototypes, running at real
+                            customer sites with constrained hardware, real-time
+                            data, industrial protocols and remote operation.
+                        </p>
+
+                        <a href="/notebook/akvakt">Read the technical story →</a
+                        >
+                    </article>
+
+                    <article>
+                        <h3>CIXOR</h3>
+
+                        <p>
+                            A workload management system for large real-time
+                            indexing workloads, where the challenge was changing
+                            the processing model without breaking the systems
+                            around it.
+                        </p>
+
+                        <a href="/notebook/cixor">Read the technical story →</a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="page-section">
+                <h2>THE ENGINEERING NOTEBOOK.</h2>
+
+                <p>
+                    I started the Engineering Notebook to document the reasoning
+                    behind this kind of work.
+                </p>
+
+                <p>Not tutorials. Not technology lists.</p>
+
+                <p>
+                    Technical stories about real systems: what made them
+                    difficult, which constraints mattered, what decisions were
+                    made, what went wrong, and why the architecture ended up the
+                    way it did.
+                </p>
+
+                <a href="/notebook">Explore the Engineering Notebook →</a>
+            </section>
+
+            <section class="page-section contact">
+                <h2>IF THE SYSTEM IS DIFFICULT, I'M INTERESTED.</h2>
+
+                <p>
+                    If you're dealing with a system that's becoming difficult to
+                    understand, a technical decision that needs direction, or an
+                    engineering problem that needs someone to take ownership,
+                    let's talk.
+                </p>
+
+                <a href="/contact">Get in touch →</a>
+            </section>
+        </main>
+
+        <Footer />
+    </body>
+</html>

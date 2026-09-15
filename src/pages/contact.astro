@@ -1,0 +1,44 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import { SITE_TITLE } from "../consts";
+
+const description =
+    "Get in touch with José María Sánchez Salas, Software Engineer & Architect.";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <BaseHead title={`Contact — ${SITE_TITLE}`} description={description} />
+    </head>
+
+    <body>
+        <Header />
+
+        <main>
+            <section class="page-intro">
+                <h1>LET'S TALK</h1>
+
+                <p class="lead">
+                    Have a difficult system, an architecture problem, or
+                    something that needs figuring out?
+                </p>
+
+                <p>
+                    If you think I might be useful, <a
+                        href="mailto:me@jmssalas.com">send me an email</a
+                    >.
+                </p>
+
+                <p>
+                    Tell me what you're working on and what's making it
+                    difficult.
+                </p>
+            </section>
+        </main>
+
+        <Footer />
+    </body>
+</html>
