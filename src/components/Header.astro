@@ -5,17 +5,17 @@ import HeaderLink from './HeaderLink.astro';
 
 <header>
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<a class="site-name" href="/">{SITE_TITLE}</a>
+
 		<div class="internal-links">
 			<HeaderLink href="/#work">Work</HeaderLink>
 			<HeaderLink href="/notebook">Notebook</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
-		</div>
-		<div>
 			<HeaderLink href="/#contact">Contact</HeaderLink>
 		</div>
 	</nav>
 </header>
+
 <style>
 	header {
 		margin: 0;
@@ -23,44 +23,51 @@ import HeaderLink from './HeaderLink.astro';
 		background: var(--paper);
 		border-bottom: 1px solid var(--line);
 	}
-	h2 {
-		margin: 0;
-		font-size: 0.95rem;
-		letter-spacing: 0;
-	}
 
-	h2 a,
-	h2 a.active {
-		color: rgb(var(--black));
-		text-decoration: none;
-	}
 	nav {
 		display: flex;
 		align-items: center;
-		gap: 2rem;
 		justify-content: space-between;
+		gap: 2rem;
 		min-height: 4.5rem;
 	}
+
+	.site-name {
+		color: rgb(var(--black));
+		font-size: 1rem;
+		font-weight: 700;
+		letter-spacing: -0.01em;
+		text-decoration: none;
+	}
+
+	.site-name:hover {
+		color: rgb(var(--black));
+	}
+
 	.internal-links {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 0.25rem 1.25rem;
 		justify-content: flex-end;
 	}
+
 	.internal-links a {
 		padding: 0.4rem 0;
 		color: rgb(var(--gray-dark));
 		font-size: 0.88rem;
-		font-weight: 700;
+		font-weight: 600;
 		text-decoration: none;
 	}
+
 	.internal-links a:hover,
 	.internal-links a.active {
 		color: var(--accent-dark);
 	}
+
 	.internal-links a.active {
 		border-bottom: 2px solid var(--accent);
 	}
+
 	@media (max-width: 620px) {
 		nav {
 			align-items: flex-start;
@@ -68,6 +75,7 @@ import HeaderLink from './HeaderLink.astro';
 			gap: 0.75rem;
 			padding: 1rem 0;
 		}
+
 		.internal-links {
 			width: 100%;
 			justify-content: flex-start;
