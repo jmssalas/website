@@ -1,117 +1,259 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
+    <head>
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    </head>
 
-		<main>
-			<section class="hero">
-				<p class="eyebrow">Software Engineer &amp; Architect</p>
+    <body>
+        <Header />
 
-				<h1>I TURN COMPLEXITY INTO STRUCTURE.</h1>
+        <main>
+            <!-- Hero -->
+            <section class="hero">
+                <h1>I TURN COMPLEXITY INTO STRUCTURE</h1>
 
-				<p class="hero-description">
-					I help engineering teams make sense of complex systems, make better technical
-					decisions, and build reliable software.
-				</p>
+                <p class="hero-description">
+                    Complex systems rarely fail because they're too complex.
+                    They fail when nobody understands <strong
+                        >what actually matters.</strong
+                    >
+                </p>
 
-				<a href="#work">See how I work ↓</a>
-			</section>
+                <p class="hero-description">
+                    I help engineering teams make sense of difficult systems,
+                    make hard technical decisions, and build software that holds
+                    up in the real world.
+                </p>
 
-			<section class="problem">
-				<h2>Complexity is rarely the problem.</h2>
-				<p>Unstructured complexity is.</p>
-			</section>
+                <a href="#problem">↓ KEEP READING</a>
+            </section>
 
-			<section class="services">
-				<h2>How I can help</h2>
+            <!-- Problem -->
+            <section class="problem" id="problem">
+                <h2>WHEN EVERYTHING IS CONNECTED, NOTHING IS OBVIOUS</h2>
 
-				<div class="service-grid">
-					<div class="service-card">
-					<h3>Architecture &amp; System Design</h3>
-					<p>
-						Turning ambiguous requirements and constraints into systems that are
-						understandable, evolvable and reliable.
-					</p>
-					</div>
+                <div>
+                    <p>
+                        Requirements. Constraints. Legacy decisions. Distributed
+                        systems. Real-time data. Hardware. Protocols.
+                        Performance.
+                    </p>
 
-					<div class="service-card">
-					<h3>Systems Diagnosis</h3>
-					<p>
-						Understanding difficult existing systems, finding the real constraints,
-						and turning technical uncertainty into clear decisions.
-					</p>
-					</div>
+                    <p>Everything affects everything else.</p>
 
-					<div class="service-card">
-					<h3>Engineering Rescue</h3>
-					<p>
-						Helping teams move forward when a system has become difficult to maintain,
-						scale, debug or evolve.
-					</p>
-					</div>
-				</div>
-			</section>
+                    <p>And that's where things usually go wrong.</p>
 
-			<section class="process">
-				<h2>How I work</h2>
+                    <p>
+                        <strong
+                            >The hardest engineering problems aren't solved by
+                            writing more code.</strong
+                        >
+                    </p>
 
-				<div class="process-flow">
-					<p class="process-step">Ambiguity → Understanding → Structure → Decisions → Engineering → Reliable System</p>
-				</div>
-			</section>
+                    <p>
+                        They're solved by understanding the system well enough
+                        to know <strong
+                            >what code should exist in the first place.</strong
+                        >
+                    </p>
+                </div>
+            </section>
 
-			<section class="selected-work" id="work">
-				<h2>Selected work</h2>
+            <!-- Services -->
+            <section class="services">
+                <h2>
+                    I HELP TURN TECHNICAL UNCERTAINTY INTO SOMETHING YOU CAN
+                    BUILD
+                </h2>
 
-				<div class="project-grid">
-					<article class="project-card">
-					<h3>AKVAKT</h3>
-					<p>Designing a platform from zero.</p>
-					</article>
+                <div class="service-grid">
+                    <article class="service-card">
+                        <h3>Architecture &amp; System Design</h3>
 
-					<article class="project-card">
-					<h3>CIXOR</h3>
-					<p>Making a difficult system incremental.</p>
-					</article>
-				</div>
-			</section>
+                        <p>
+                            You have requirements, constraints and a vague idea
+                            of where you're going. I turn that into a system
+                            with clear boundaries, explicit trade-offs and
+                            decisions you can actually build on.
+                        </p>
+                    </article>
 
-			<section class="notebook">
-				<h2>Engineering Notebook</h2>
-				<p>I write about the engineering decisions behind real systems.</p>
-				<a href="/notebook">Explore the Engineering Notebook →</a>
-			</section>
+                    <article class="service-card">
+                        <h3>Systems Diagnosis</h3>
 
-			<section class="about">
-				<h2>About</h2>
-				<p>
-					I'm José, a software engineer and architect with around eight years of
-					experience building and evolving complex systems.
-				</p>
-				<a href="/about">More about me →</a>
-			</section>
+                        <p>
+                            Something works. But nobody really knows why. I dig
+                            into difficult existing systems, find the real
+                            constraints and separate symptoms from the problems
+                            underneath them.
+                        </p>
+                    </article>
 
-			<section class="contact" id="contact">
-				<h2>Have a difficult technical problem?</h2>
-				<p>
-					If you're dealing with a system that's hard to understand, a new platform
-					that needs architectural direction, or an engineering problem that needs
-					someone to take ownership — let's talk.
-				</p>
-				<a href="mailto:TODO">Get in touch →</a>
-			</section>
-		</main>
+                    <article class="service-card">
+                        <h3>Engineering Rescue</h3>
 
-		<Footer />
-	</body>
+                        <p>
+                            The system has become painful. Changes are risky.
+                            Performance is unpredictable. Nobody wants to touch
+                            certain parts anymore. I help make it understandable
+                            again — and give the team a way forward.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Process -->
+            <section class="process">
+                <h2>I DON'T START WITH TECHNOLOGY</h2>
+
+                <div>
+                    <div class="process-flow">
+                        <p class="process-step">Ambiguity</p>
+                        <p class="process-step">Understanding</p>
+                        <p class="process-step">Structure</p>
+                        <p class="process-step">Decisions</p>
+                        <p class="process-step">Engineering</p>
+                        <p class="process-step">Reliable System</p>
+                    </div>
+
+                    <p>Because choosing a technology is easy.</p>
+
+                    <p>
+                        <strong
+                            >Knowing what the system actually needs is the hard
+                            part.</strong
+                        >
+                    </p>
+                </div>
+            </section>
+
+            <!-- Selected Work -->
+            <section class="selected-work" id="work">
+                <h2>REAL SYSTEMS. REAL CONSTRAINTS</h2>
+
+                <p>
+                    I don't believe architecture should be discussed in a
+                    vacuum. These are some of the systems I've actually built
+                    and evolved.
+                </p>
+
+                <div class="project-grid">
+                    <article class="project-card">
+                        <h3>AKVAKT</h3>
+
+                        <p class="project-lead">
+                            <strong>Designing a platform from zero.</strong>
+                        </p>
+
+                        <p>
+                            Industrial edge systems running at customer sites.
+                            Real-time data. Constrained hardware. Industrial
+                            protocols. Remote operation.
+                        </p>
+
+                        <p>
+                            A platform had to emerge from all of those
+                            constraints — without turning every new customer
+                            into a new codebase.
+                        </p>
+
+                        <a href="/notebook/akvakt">Read the story →</a>
+                    </article>
+
+                    <article class="project-card">
+                        <h3>CIXOR</h3>
+
+                        <p class="project-lead">
+                            <strong
+                                >Making a difficult system incremental.</strong
+                            >
+                        </p>
+
+                        <p>
+                            Large workloads. Distributed processing. Operational
+                            complexity.
+                        </p>
+
+                        <p>
+                            The challenge wasn't simply making it faster. It was
+                            changing how the system processed work without
+                            breaking everything around it.
+                        </p>
+
+                        <a href="/notebook/cixor">Read the story →</a>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Engineering Notebook -->
+            <section class="notebook">
+                <h2>I WRITE DOWN THE DECISIONS BEHIND THE SYSTEMS</h2>
+
+                <p>
+                    Not tutorials. Not lists of technologies. Not “10 things I
+                    learned this week”.
+                </p>
+
+                <p>
+                    Technical stories about real systems — what made them
+                    difficult, what decisions were made, what went wrong, and
+                    why the architecture ended up the way it did.
+                </p>
+
+                <a href="/notebook">Explore the Engineering Notebook →</a>
+            </section>
+
+            <!-- About -->
+            <section class="about">
+                <h2>ABOUT</h2>
+
+                <h3>José María Sánchez Salas</h3>
+
+                <p><strong>Software Engineer &amp; Architect</strong></p>
+
+                <p>
+                    Around eight years building and evolving complex systems —
+                    from backend platforms to industrial edge environments.
+                </p>
+
+                <p>
+                    I tend to end up where the system has become difficult to
+                    understand.
+                </p>
+
+                <p>That's usually where the interesting engineering starts.</p>
+
+                <a href="/about">More about me →</a>
+            </section>
+
+            <!-- Contact -->
+            <section class="contact" id="contact">
+                <h2>HAVE A DIFFICULT SYSTEM?</h2>
+
+                <p>
+                    Good. That's usually more interesting than starting from
+                    scratch.
+                </p>
+
+                <p>
+                    If your system is hard to understand, your architecture
+                    needs direction, or an engineering problem has become
+                    difficult enough that someone needs to take ownership:
+                </p>
+
+                <p><strong>Let's talk.</strong></p>
+
+                <a href="mailto:TODO">Get in touch →</a>
+            </section>
+        </main>
+
+        <Footer />
+    </body>
 </html>
