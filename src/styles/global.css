@@ -369,10 +369,6 @@ a:hover {
     font-size: clamp(1.8rem, 3vw, 2.5rem);
 }
 
-.about p strong {
-    color: var(--accent-dark);
-}
-
 .about a {
     font-weight: 700;
 }
@@ -382,12 +378,6 @@ a:hover {
 .contact {
     padding-top: var(--space-9);
     border-top: 2px solid var(--accent);
-}
-
-.contact p:last-of-type {
-    margin-top: var(--space-6);
-    margin-bottom: var(--space-5);
-    font-size: 1.5rem;
 }
 
 .contact > a {
