@@ -391,6 +391,28 @@ a:hover {
     color: #fff;
 }
 
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-5);
+}
+
+.contact-links a {
+    display: inline-block;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--accent-dark);
+    color: var(--accent-dark);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.contact-links a:hover {
+    background: var(--accent-dark);
+    color: #fff;
+}
+
 /* Generic content / Markdown */
 
 .prose {
