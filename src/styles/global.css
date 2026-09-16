@@ -12,8 +12,12 @@
     --line: #d8d5cc;
     --muted: #5b6162;
 
-    --font-body: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --font-display: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-body:
+        -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+    --font-display:
+        -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
 
     --space-1: 0.5rem;
     --space-2: 0.75rem;
@@ -29,7 +33,7 @@
     color-scheme: light;
 }
 
-:root[data-theme='dark'] {
+:root[data-theme="dark"] {
     --accent: #6fa59d;
     --accent-dark: #8bbab3;
     --black: 235, 237, 236;
@@ -113,6 +117,9 @@ h6 {
 h1 {
     font-size: clamp(2.5rem, 8vw, 7rem);
     letter-spacing: -0.055em;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
 }
 
 h2 {
@@ -562,7 +569,8 @@ hr {
     }
 
     h1 {
-        font-size: clamp(3rem, 15vw, 5rem);
+        font-size: clamp(2.5rem, 11vw, 4rem);
+        line-height: 0.95;
     }
 
     h2 {
