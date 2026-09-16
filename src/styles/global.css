@@ -375,11 +375,6 @@ a:hover {
 
 /* Contact */
 
-.contact {
-    padding-top: var(--space-9);
-    border-top: 2px solid var(--accent);
-}
-
 .contact > a {
     display: inline-block;
     padding: 0.8rem 1rem;
