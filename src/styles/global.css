@@ -432,6 +432,10 @@ a:hover {
     margin-bottom: var(--space-5);
 }
 
+.prose :is(h2, h3, h4) {
+    margin-top: var(--space-6);
+}
+
 textarea,
 input {
     font: inherit;

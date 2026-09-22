@@ -29,7 +29,7 @@ const { title, description, pubDate, updatedDate } = Astro.props;
                 box-shadow: var(--box-shadow);
             }
             .prose {
-                width: 720px;
+                width: 900px;
                 max-width: calc(100% - 2em);
                 margin: auto;
                 padding: 1em;
@@ -73,6 +73,7 @@ const { title, description, pubDate, updatedDate } = Astro.props;
                         </div>
                         <h1>{title}</h1>
                         <hr />
+                        <i>{description}</i>
                     </div>
                     <slot />
                     <hr />

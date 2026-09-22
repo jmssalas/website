@@ -44,11 +44,6 @@ const entries = (await getCollection("notebook")).sort(
                 margin-bottom: var(--space-5);
             }
 
-            .notebook-intro p {
-                margin: 0;
-                font-size: clamp(1.15rem, 2vw, 1.4rem);
-            }
-
             .notes {
                 border-top: 1px solid var(--line);
             }
@@ -151,10 +146,10 @@ const entries = (await getCollection("notebook")).sort(
         <main class="notebook-page">
             <header class="notebook-intro">
                 <p class="eyebrow">Engineering Notebook</p>
-                <h1>Notes from inside difficult systems.</h1>
+                <h1>NOTES FROM REAL ENGINEERING WORK</h1>
                 <p>
-                    Technical writing about the decisions, constraints and
-                    structures behind real engineering work.
+                    Technical writing about the decisions, constraints,
+                    trade-offs and lessons behind systems I build and work on.
                 </p>
             </header>
 
@@ -163,7 +158,11 @@ const entries = (await getCollection("notebook")).sort(
                     entries.map((entry, index) => (
                         <article class="note">
                             <p class="note-index" aria-hidden="true">
-                                #{String(entries.length - index).padStart(2, "0")}
+                                #
+                                {String(entries.length - index).padStart(
+                                    2,
+                                    "0",
+                                )}
                             </p>
                             <div class="note-content">
                                 <p class="note-meta">
