@@ -98,6 +98,14 @@ If there was one thing I was clear about before rebuilding the entire applicatio
 - **The application remaining a SPA**, because the existing approach was already working well.
 - **The application itself remaining essentially the same**, since the goal was to improve its internal structure, not to build a different product.
 
+## Deployment
+
+The application is now packaged as a Docker image and can be deployed as a self-contained service.
+
+A public demo instance is running using Docker Compose, with runtime configuration kept outside the image and application data persisted independently from the container.
+
+[Open the public demo](https://demo-ftc.jmssalas.com/)
+
 ## What Changed Between Versions
 
 | **First version**                                   | **Second version**                   |
