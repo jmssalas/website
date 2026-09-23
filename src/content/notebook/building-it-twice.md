@@ -4,9 +4,8 @@ description: "What I learned from building a working solution before building on
 pubDate: 2026-09-22
 ---
 
-[**Live demo**](https://demo-ftc.jmssalas.com/)
+**Demo:** [Live application](https://demo-ftc.jmssalas.com/) · **Code:** [Original](https://github.com/jmssalas/football-teams-creator) · [Go rewrite](https://github.com/jmssalas/go-football-teams-creator)
 
-**Code:** [Original version](https://github.com/jmssalas/football-teams-creator) · [Go rewrite](https://github.com/jmssalas/go-football-teams-creator)
 
 
 ## The Problem
