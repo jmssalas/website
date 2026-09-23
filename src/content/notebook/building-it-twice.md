@@ -98,14 +98,6 @@ If there was one thing I was clear about before rebuilding the entire applicatio
 - **The application remaining a SPA**, because the existing approach was already working well.
 - **The application itself remaining essentially the same**, since the goal was to improve its internal structure, not to build a different product.
 
-## Deployment
-
-The application is now packaged as a Docker image and can be deployed as a self-contained service.
-
-A public demo instance is running using Docker Compose, with runtime configuration kept outside the image and application data persisted independently from the container.
-
-[Open the public demo](https://demo-ftc.jmssalas.com/)
-
 ## What Changed Between Versions
 
 | **First version**                                   | **Second version**                   |
@@ -117,6 +109,17 @@ A public demo instance is running using Docker Compose, with runtime configurati
 | Frontend closely involved with application behavior | Frontend communicates through an API |
 | SvelteKit backend/API                               | Go API                               |
 
+The second version was not a replacement because the first one had failed. It was a different version of the same application, built with a much clearer understanding of what the system actually needed.
+
+## Putting the Second Version to Work
+
+The second version is packaged as a Docker image, making the application self-contained and independent from the environment where it runs.
+
+The image is published to GitHub Container Registry and deployed to Railway, with application data persisted separately from the container.
+
+A public demo is available here:
+
+[Open the public demo](https://demo-ftc.jmssalas.com/)
 
 ## What Building It Twice Taught Me
 
