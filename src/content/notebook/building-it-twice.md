@@ -4,7 +4,10 @@ description: "What I learned from building a working solution before building on
 pubDate: 2026-09-22
 ---
 
+[**Live demo**](https://demo-ftc.jmssalas.com/)
+
 **Code:** [Original version](https://github.com/jmssalas/football-teams-creator) · [Go rewrite](https://github.com/jmssalas/go-football-teams-creator)
+
 
 ## The Problem
 
@@ -110,16 +113,6 @@ If there was one thing I was clear about before rebuilding the entire applicatio
 | SvelteKit backend/API                               | Go API                               |
 
 The second version was not a replacement because the first one had failed. It was a different version of the same application, built with a much clearer understanding of what the system actually needed.
-
-## Putting the Second Version to Work
-
-The second version is packaged as a Docker image, making the application self-contained and independent from the environment where it runs.
-
-The image is published to GitHub Container Registry and deployed to Railway, with application data persisted separately from the container.
-
-A public demo is available here:
-
-[Open the public demo](https://demo-ftc.jmssalas.com/)
 
 ## What Building It Twice Taught Me
 
