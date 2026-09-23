@@ -1,28 +1,30 @@
 ---
-import type { HTMLAttributes } from 'astro/types';
+import type { HTMLAttributes } from "astro/types";
 
-type Props = HTMLAttributes<'a'>;
+type Props = HTMLAttributes<"a">;
 
 const { href, class: className, ...props } = Astro.props;
 const currentUrl = new URL(Astro.url);
 const linkUrl = href ? new URL(href, Astro.url) : null;
 const isActive = Boolean(
-	linkUrl &&
-	linkUrl.pathname === currentUrl.pathname &&
-	(!linkUrl.hash || linkUrl.hash === currentUrl.hash),
+    linkUrl &&
+    (linkUrl.pathname === currentUrl.pathname ||
+        (linkUrl.pathname !== "/" &&
+            currentUrl.pathname.startsWith(`${linkUrl.pathname}/`))) &&
+    (!linkUrl.hash || linkUrl.hash === currentUrl.hash),
 );
 ---
 
 <a href={href} class:list={[className, { active: isActive }]} {...props}>
-	<slot />
+    <slot />
 </a>
 <style>
-	a {
-		display: inline-block;
-		text-decoration: none;
-	}
-	a.active {
-		font-weight: bolder;
-		text-decoration: underline;
-	}
+    a {
+        display: inline-block;
+        text-decoration: none;
+    }
+    a.active {
+        font-weight: bolder;
+        text-decoration: underline;
+    }
 </style>
