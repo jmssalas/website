@@ -86,7 +86,7 @@ main {
 
 main > section {
     padding: var(--space-7) 0;
-    border-top: 1px solid var(--line);
+    /* border-top: 1px solid var(--line); */
 }
 
 main > section:first-child {
@@ -216,7 +216,7 @@ a:hover {
 }
 
 .problem h2 {
-    margin-bottom: var(--space-7);
+    margin-bottom: var(--space-5);
 }
 
 .problem p {
@@ -353,14 +353,6 @@ a:hover {
     margin-bottom: var(--space-5);
 }
 
-.notebook p:first-of-type {
-    color: var(--muted);
-}
-
-.notebook p:last-of-type {
-    margin-bottom: var(--space-5);
-}
-
 .notebook a {
     font-weight: 700;
 }
@@ -368,7 +360,7 @@ a:hover {
 /* About */
 
 .about h2 {
-    margin-bottom: var(--space-6);
+    margin-bottom: var(--space-5);
 }
 
 .about h3 {
